@@ -18,6 +18,7 @@
   "release": {
     "tagFormat": "test-${version}",
     "branches": [
+      "master",
       {"name": "hina/light-dark-indigo-theme", "prerelease": true}
     ]
   }
