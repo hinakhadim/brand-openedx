@@ -1,5 +1,21 @@
 {
-    "scripts": {
-      "preinstall": "cp -R ../common/ ./"
-    }
+  "name": "@hinakhadim/test-brand-openedx-dark",
+  "version": "1.0.0",
+  "description": "The default branding and SASS theme package containing for Open edX applications. This package is designed to be copied and customized.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hinakhadim/brand-openedx.git#dark"
+  },
+  "author": "Open edX Community",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/hinakhadim/brand-openedx/issues"
+  },
+  "homepage": "https://github.com/hinakhadim/brand-openedx#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "preinstall": "cp -R ../common/* ./"
+  }
 }
