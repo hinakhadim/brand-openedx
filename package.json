@@ -19,7 +19,7 @@
     "tagFormat": "test-${version}",
     "branches": [
       "master",
-      {"name": "hina/light-dark-indigo-theme", "prerelease": true}
+      "hina/light-dark-indigo-theme"
     ]
   }
 }
