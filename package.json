@@ -16,7 +16,7 @@
     "access": "public"
   },
   "scripts": {
-    "postinstall": "node preinstall.js"
+    "postinstall": "node postinstall.js"
   },
   "release": {
     "tagFormat": "test-${version}",
@@ -24,8 +24,5 @@
       "master",
       "hina/light-dark-indigo-theme"
     ]
-  },
-  "dependencies": {
-    "fs-extra": "^11.2.0"
   }
 }
