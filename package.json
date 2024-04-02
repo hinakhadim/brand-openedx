@@ -15,11 +15,17 @@
   "publishConfig": {
     "access": "public"
   },
+  "scripts": {
+    "postinstall": "node preinstall.js"
+  },
   "release": {
     "tagFormat": "test-${version}",
     "branches": [
       "master",
       "hina/light-dark-indigo-theme"
     ]
+  },
+  "dependencies": {
+    "fs-extra": "^11.2.0"
   }
 }
