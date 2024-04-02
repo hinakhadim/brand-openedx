@@ -1,5 +1,0 @@
-// {
-//     "scripts": {
-//       "preinstall": "cp -R ../common/* ./"
-//     }
-// }
