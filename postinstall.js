@@ -1,12 +1,8 @@
 const fs = require("fs");
 const path = require('path');
 
-const themesSupported = ["light", "dark"]
-
+const themesSupported = ["dark"]
 let theme = process.env.npm_config_theme;
-if (!themesSupported.includes(theme)){
-  theme = 'light';
-}
 
 // INFO: writing copyDirectorySync instead of using fs-extra package because we don't want to have any npm dependency in brand-openedx
 function copyDirectorySync(source, destination) {
@@ -28,7 +24,8 @@ function copyDirectorySync(source, destination) {
   });
 }
 
-const srcDir = path.resolve(__dirname, 'themes', theme);
-const destDir = path.resolve(__dirname, 'paragon');
-copyDirectorySync(srcDir, destDir);
-
+if (themesSupported.includes(theme)){
+  const srcDir = path.resolve(__dirname, 'themes', theme);
+  const destDir = path.resolve(__dirname, 'paragon'); 
+  copyDirectorySync(srcDir, destDir);
+}
