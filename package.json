@@ -22,7 +22,7 @@
     "tagFormat": "test-${version}",
     "branches": [
       "master",
-      "hina/light-dark-indigo-theme"
+      "hina/v2"
     ]
   }
 }

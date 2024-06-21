@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - hina/light-dark-indigo-theme
+      - hina/v2
 jobs:
   release:
     name: Release
