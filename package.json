@@ -19,7 +19,7 @@
     "postinstall": "node postinstall.js"
   },
   "release": {
-    "tagFormat": "test-${version}",
+    "tagFormat": "testing-${version}",
     "branches": [
       "master",
       "hina/v2"
