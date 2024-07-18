@@ -27,6 +27,7 @@ import useParagonThemeVariants from './useParagonThemeVariants';
  */
 const useParagonTheme = (config) => {
   const paragonThemeUrls = useParagonThemeUrls(config);
+  console.log("===========paragon theme  uurls:", paragonThemeUrls);
   const {
     core: themeCore,
     defaults: themeVariantDefaults,

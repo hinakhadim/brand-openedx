@@ -24,14 +24,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/openedx/frontend-platform.git"
+    "url": "git+https://github.com/hinakhadim/brand-openedx.git"
   },
   "author": "edX",
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/openedx/frontend-platform/issues"
+    "url": "https://github.com/hinakhadim/brand-openedx/issues"
   },
-  "homepage": "https://github.com/openedx/frontend-platform#readme",
+  "homepage": "https://github.com/hinakhadim/brand-openedx#readme",
   "devDependencies": {
     "@edx/brand": "npm:@openedx/brand-openedx@^1.2.2",
     "@edx/browserslist-config": "1.2.0",
@@ -84,5 +84,12 @@
     "react-redux": "^7.1.1 || ^8.1.1",
     "react-router-dom": "^6.0.0",
     "redux": "^4.0.4"
-  }
+  },
+  "release": {
+    "tagFormat": "platform-${version}",
+    "branches": [
+      "master",
+      "hina/platform"
+    ]
+  },
 }

@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - alpha
+      - hina/platform
 
 jobs:
   release:
