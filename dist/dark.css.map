@@ -1,0 +1,1 @@
+{"version":3,"sources":["dark.css"],"names":[],"mappings":"AAAA,MACI,WAAY,CACZ,yBACJ","file":"dark.css","sourcesContent":[":root{\n    --blue: blue;\n    --pgn-color-link-base: red;\n}"]}
