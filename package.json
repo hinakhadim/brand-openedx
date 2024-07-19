@@ -18,9 +18,7 @@
     "test": "fedx-scripts jest --coverage",
     "test:watch": "npm run test -- --watch"
   },
-  "files": [
-    "/dist"
-  ],
+  
   "bin": {
     "intl-imports.js": "i18n/scripts/intl-imports.js",
     "transifex-utils.js": "i18n/scripts/transifex-utils.js"
