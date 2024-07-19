@@ -19,7 +19,7 @@ build:
 	cp ./package.json ./dist/package.json
 	cp ./LICENSE ./dist/LICENSE
 	cp ./README.md ./dist/README.md
-	scp -r dist/* .
+	cp -r dist/* .
 	rm -rf ./dist
 
 docs-build:
