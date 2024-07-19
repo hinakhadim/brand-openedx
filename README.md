@@ -153,3 +153,5 @@ For any MFE built on top of the frontend-platform, the deployment strategy will 
 2. Copy the contents of dist/ to a web server.
 
 3. Configure the platform to point at your MFE. (details on this coming soon)
+
+tessting
