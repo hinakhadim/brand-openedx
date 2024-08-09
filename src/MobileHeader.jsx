@@ -6,6 +6,7 @@ import { getConfig } from '@edx/frontend-platform';
 // Local Components
 import { Menu, MenuTrigger, MenuContent } from './Menu';
 import { LinkedLogo, Logo } from './Logo';
+import ThemeToggleButton from './ThemeToggleButton';
 
 // i18n
 import messages from './Header.messages';
@@ -154,6 +155,7 @@ class MobileHeader extends React.Component {
         <div className={`logo-holder ${logoClasses}`}>
           { logoDestination === null ? <Logo className="logo" src={logo} alt={logoAltText} /> : <LinkedLogo className="logo" {...logoProps} itemType="http://schema.org/Organization" />}
         </div>
+        <ThemeToggleButton />
         {userMenu.length > 0 || loggedOutItems.length > 0 ? (
           <div className="mobile-menu">
             <Menu tag="nav" aria-label={intl.formatMessage(messages['header.label.secondary.nav'])} className="position-static">

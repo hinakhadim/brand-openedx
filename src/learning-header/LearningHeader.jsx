@@ -6,6 +6,7 @@ import { AppContext } from '@edx/frontend-platform/react';
 
 import AnonymousUserMenu from './AnonymousUserMenu';
 import AuthenticatedUserDropdown from './AuthenticatedUserDropdown';
+import ThemeToggleButton from '../ThemeToggleButton';
 import messages from './messages';
 
 const LinkedLogo = ({
@@ -60,6 +61,7 @@ const LearningHeader = ({
             </a>
           </div>
         </div>
+        <ThemeToggleButton />
         {showUserDropdown && authenticatedUser && (
         <AuthenticatedUserDropdown
           username={authenticatedUser.username}
