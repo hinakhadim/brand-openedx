@@ -7,21 +7,39 @@ const ThemeToggleButton = () => {
     return new Date(today.getFullYear(), today.getMonth(), today.getDate() + 7);
   };
 
-  const onToggleHandle = (themeName) => {
+  const onToggleTheme = () => {
     const cookies = new Cookies();
-    console.log('---egtt---', getConfig());
-    const options = { domain: 'local.edly.io', path: '/', expires: getNextWeek() };
+    const serverURL = new URL(getConfig().LMS_BASE_URL);
+    const themeCookieName = getConfig().THEME_COOKIE_NAME;
 
-    if (themeName === 'dark') {
-      document.body.classList.add('indigo-dark-theme');
-    } else {
+    const options = { domain: serverURL.hostname, path: '/', expires: getNextWeek() };
+    let themeName = '';
+
+    if (cookies.get(themeCookieName) === 'dark') {
       document.body.classList.remove('indigo-dark-theme');
+      themeName = 'light';
+    } else {
+      document.body.classList.add('indigo-dark-theme');
+      themeName = 'dark';
     }
-    cookies.set('indigo-theme-type', themeName, options);
+    cookies.set(themeCookieName, themeName, options);
   };
 
   return (
-    <div><button type="button" onClick={() => onToggleHandle('light')}>Light</button><button type="button" onClick={() => onToggleHandle('dark')}>Dark</button></div>
+    <div className="theme-toggle-button">
+      <span id="darkmode" role="button" tabIndex="0" onClick={onToggleTheme} onKeyDown={onToggleTheme}>
+        <div className="darkmode_icon">
+          <span className="ray" />
+          <span className="ray" />
+          <span className="ray" />
+          <span className="ray" />
+          <span className="ray" />
+          <span className="ray" />
+          <span className="ray" />
+          <span className="ray" />
+        </div>
+      </span>
+    </div>
   );
 };
 
