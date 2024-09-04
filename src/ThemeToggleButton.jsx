@@ -1,10 +1,6 @@
 import React from 'react';
 import { getConfig } from '@edx/frontend-platform';
 import Cookies from 'universal-cookie';
-<<<<<<< HEAD
-
-const ThemeToggleButton = () => {
-=======
 import { Icon } from '@openedx/paragon';
 import { WbSunny, Nightlight } from '@openedx/paragon/icons';
 
@@ -12,21 +8,13 @@ const ThemeToggleButton = () => {
   const cookies = new Cookies();
   const themeCookieName = getConfig().THEME_COOKIE_NAME ? getConfig().THEME_COOKIE_NAME : null;
 
->>>>>>> hina/updated_theme
   const getNextWeek = () => {
     const today = new Date();
     return new Date(today.getFullYear(), today.getMonth(), today.getDate() + 7);
   };
 
   const onToggleTheme = () => {
-<<<<<<< HEAD
-    const cookies = new Cookies();
     const serverURL = new URL(getConfig().LMS_BASE_URL);
-    const themeCookieName = getConfig().THEME_COOKIE_NAME;
-
-=======
-    const serverURL = new URL(getConfig().LMS_BASE_URL);
->>>>>>> hina/updated_theme
     const options = { domain: serverURL.hostname, path: '/', expires: getNextWeek() };
     let themeName = '';
 
