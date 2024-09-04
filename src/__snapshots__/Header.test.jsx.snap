@@ -150,46 +150,6 @@ exports[`<Header /> renders correctly for anonymous mobile 1`] = `
   </div>
   <div />
   <div
-    className="theme-toggle-button"
-  >
-    <span
-      id="darkmode"
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      role="button"
-      tabIndex="0"
-    >
-      <div
-        className="darkmode_icon"
-      >
-        <span
-          className="ray"
-        />
-        <span
-          className="ray"
-        />
-        <span
-          className="ray"
-        />
-        <span
-          className="ray"
-        />
-        <span
-          className="ray"
-        />
-        <span
-          className="ray"
-        />
-        <span
-          className="ray"
-        />
-        <span
-          className="ray"
-        />
-      </div>
-    </span>
-  </div>
-  <div
     className="mobile-menu"
   >
     <nav
@@ -428,46 +388,6 @@ exports[`<Header /> renders correctly for authenticated mobile 1`] = `
     </a>
   </div>
   <div />
-  <div
-    className="theme-toggle-button"
-  >
-    <span
-      id="darkmode"
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      role="button"
-      tabIndex="0"
-    >
-      <div
-        className="darkmode_icon"
-      >
-        <span
-          className="ray"
-        />
-        <span
-          className="ray"
-        />
-        <span
-          className="ray"
-        />
-        <span
-          className="ray"
-        />
-        <span
-          className="ray"
-        />
-        <span
-          className="ray"
-        />
-        <span
-          className="ray"
-        />
-        <span
-          className="ray"
-        />
-      </div>
-    </span>
-  </div>
   <div
     className="mobile-menu"
   >
