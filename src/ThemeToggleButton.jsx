@@ -4,9 +4,8 @@ import Cookies from 'universal-cookie';
 import { Icon } from '@openedx/paragon';
 import { WbSunny, Nightlight } from '@openedx/paragon/icons';
 
-
-let themeCookie = 'indigo-toggle-dark';
-let themeCookieExpiry = 90; // days
+const themeCookie = 'indigo-toggle-dark';
+const themeCookieExpiry = 90; // days
 
 const ThemeToggleButton = () => {
   const cookies = new Cookies();
@@ -17,9 +16,7 @@ const ThemeToggleButton = () => {
     return new Date(today.getFullYear(), today.getMonth(), today.getDate() + themeCookieExpiry);
   };
 
-  const getCookieOptions = (serverURL) => {
-    return { domain: serverURL.hostname, path: '/', expires: getCookieExpiry() }; 
-  };
+  const getCookieOptions = (serverURL) => ({ domain: serverURL.hostname, path: '/', expires: getCookieExpiry() });
 
   const onToggleTheme = () => {
     const serverURL = new URL(getConfig().LMS_BASE_URL);
