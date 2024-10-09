@@ -8,7 +8,7 @@ frontend-component-header
 Purpose
 ********
 
-A generic header for Open edX micro-frontend applications.
+A generic header for Open edX micro-frontend applications. helllo world!
 
 ************
 Getting Started
