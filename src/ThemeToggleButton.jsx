@@ -4,36 +4,40 @@ import Cookies from 'universal-cookie';
 import { Icon } from '@openedx/paragon';
 import { WbSunny, Nightlight } from '@openedx/paragon/icons';
 
+const themeCookie = 'indigo-toggle-dark';
+const themeCookieExpiry = 90; // days
+
 const ThemeToggleButton = () => {
   const cookies = new Cookies();
-  const themeCookieName = getConfig().THEME_COOKIE_NAME ? getConfig().THEME_COOKIE_NAME : null;
+  const isThemeToggleEnabled = getConfig().INDIGO_ENABLE_DARK_TOGGLE;
 
-  const getNextWeek = () => {
+  const getCookieExpiry = () => {
     const today = new Date();
-    return new Date(today.getFullYear(), today.getMonth(), today.getDate() + 7);
+    return new Date(today.getFullYear(), today.getMonth(), today.getDate() + themeCookieExpiry);
   };
+
+  const getCookieOptions = (serverURL) => ({ domain: serverURL.hostname, path: '/', expires: getCookieExpiry() });
 
   const onToggleTheme = () => {
     const serverURL = new URL(getConfig().LMS_BASE_URL);
-    const options = { domain: serverURL.hostname, path: '/', expires: getNextWeek() };
-    let themeName = '';
+    let theme = '';
 
-    if (cookies.get(themeCookieName) === 'dark') {
+    if (cookies.get(themeCookie) === 'dark') {
       document.body.classList.remove('indigo-dark-theme');
-      themeName = 'light';
+      theme = 'light';
     } else {
       document.body.classList.add('indigo-dark-theme');
-      themeName = 'dark';
+      theme = 'dark';
     }
-    cookies.set(themeCookieName, themeName, options);
+    cookies.set(themeCookie, theme, getCookieOptions(serverURL));
 
     const learningMFEUnitIframe = document.getElementById('unit-iframe');
     if (learningMFEUnitIframe) {
-      learningMFEUnitIframe.contentWindow.postMessage({ 'indigo-toggle-dark': themeName }, serverURL.origin);
+      learningMFEUnitIframe.contentWindow.postMessage({ 'indigo-toggle-dark': theme }, serverURL.origin);
     }
   };
 
-  if (!themeCookieName) {
+  if (!isThemeToggleEnabled) {
     return <div />;
   }
 
@@ -42,7 +46,7 @@ const ThemeToggleButton = () => {
       <div className="light-theme-icon"><Icon src={WbSunny} /></div>
       <div className="toggle-switch">
         <label htmlFor="theme-toggle-checkbox" className="switch">
-          <input id="theme-toggle-checkbox" defaultChecked={cookies.get(themeCookieName) === 'dark'} onChange={onToggleTheme} type="checkbox" />
+          <input id="theme-toggle-checkbox" defaultChecked={cookies.get(themeCookie) === 'dark'} onChange={onToggleTheme} type="checkbox" />
           <span className="slider round" />
         </label>
       </div>
