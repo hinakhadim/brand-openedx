@@ -2,7 +2,7 @@ name: Release CI
 on:
   push:
     branches:
-    - redwood/indigo
+    - hina/theme-cookies
 jobs:
   release:
     name: Release
