@@ -1,5 +1,5 @@
 {
-  "name": "@edly-io/indigo-frontend-component-header",
+  "name": "@hinakhadim/indigo-header",
   "version": "2.0.0",
   "description": "The standard header for Open edX",
   "main": "dist/index.js",
@@ -24,14 +24,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edly-io/frontend-component-header.git"
+    "url": "git+https://github.com/hinakhadim/brand-openedx.git"
   },
   "author": "edX",
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/edly-io/frontend-component-header/issues"
+    "url": "https://github.com/hinakhadim/brand-openedx/issues"
   },
-  "homepage": "https://github.com/edly-io/frontend-component-header#readme",
+  "homepage": "https://github.com/hinakhadim/brand-openedx#readme",
   "devDependencies": {
     "@edx/brand": "npm:@openedx/brand-openedx@^1.2.2",
     "@edx/browserslist-config": "^1.1.1",
@@ -77,9 +77,9 @@
     "react-dom": "^16.9.0 || ^17.0.0"
   },
   "release": {
-    "tagFormat": "indigo-${version}",
+    "tagFormat": "header-${version}",
     "branches": [
-      "redwood/indigo"
+      "hina/theme-cookies"
     ]
   }
 }
