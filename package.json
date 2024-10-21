@@ -77,9 +77,9 @@
     "react-dom": "^16.9.0 || ^17.0.0"
   },
   "release": {
-    "tagFormat": "header-${version}",
+    "tagFormat": "sumac-${version}",
     "branches": [
-      "hina/theme-cookies"
+      "sumac-test"
     ]
   }
 }
