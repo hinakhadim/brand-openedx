@@ -6,7 +6,6 @@ import { getConfig } from '@edx/frontend-platform';
 // Local Components
 import { Menu, MenuTrigger, MenuContent } from './Menu';
 import ThemeToggleButton from './ThemeToggleButton';
-import Avatar from './Avatar';
 import LogoSlot from './plugin-slots/LogoSlot';
 
 // i18n
