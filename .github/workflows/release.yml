@@ -2,7 +2,7 @@ name: Release CI
 on:
   push:
     branches:
-    - hina/theme-cookies
+    - sumac-test
 jobs:
   release:
     name: Release

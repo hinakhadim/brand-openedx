@@ -78,9 +78,9 @@
     "react-router-dom": "^6.14.2"
   },
   "release": {
-    "tagFormat": "header-${version}",
+    "tagFormat": "sumac-${version}",
     "branches": [
-      "hina/theme-cookies"
+      "sumac-test"
     ]
   }
 }
