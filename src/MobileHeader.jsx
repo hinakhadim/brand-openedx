@@ -5,8 +5,9 @@ import { getConfig } from '@edx/frontend-platform';
 
 // Local Components
 import { Menu, MenuTrigger, MenuContent } from './Menu';
-import { LinkedLogo, Logo } from './Logo';
 import ThemeToggleButton from './ThemeToggleButton';
+import Avatar from './Avatar';
+import LogoSlot from './plugin-slots/LogoSlot';
 
 // i18n
 import messages from './Header.messages';
@@ -152,8 +153,8 @@ class MobileHeader extends React.Component {
             </Menu>
           </div>
         ) : null}
-        <div className={`logo-holder ${logoClasses}`}>
-          { logoDestination === null ? <Logo className="logo" src={logo} alt={logoAltText} /> : <LinkedLogo className="logo" {...logoProps} itemType="http://schema.org/Organization" />}
+        <div className={`w-100 d-flex ${logoClasses}`}>
+          <LogoSlot {...logoProps} itemType="http://schema.org/Organization" />
         </div>
         <ThemeToggleButton />
         {userMenu.length > 0 || loggedOutItems.length > 0 ? (
