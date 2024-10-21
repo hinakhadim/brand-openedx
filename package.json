@@ -1,5 +1,5 @@
 {
-  "name": "@hinakhadim/indigo-header",
+  "name": "@hinakhadim/indigo-header-sumac",
   "version": "2.0.0",
   "description": "The standard header for Open edX",
   "main": "dist/index.js",
