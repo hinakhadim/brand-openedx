@@ -36,16 +36,6 @@ const MobileHeader = ({
 };
 
 MobileHeader.propTypes = {
-  studioBaseUrl: PropTypes.string.isRequired,
-  logoutUrl: PropTypes.string.isRequired,
-  number: PropTypes.string,
-  org: PropTypes.string,
-  title: PropTypes.string,
-  logo: PropTypes.string,
-  logoAltText: PropTypes.string,
-  authenticatedUserAvatar: PropTypes.string,
-  username: PropTypes.string,
-  isAdmin: PropTypes.bool,
   mainMenuDropdowns: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string,
     buttonTitle: PropTypes.node,
@@ -54,20 +44,10 @@ MobileHeader.propTypes = {
       title: PropTypes.node,
     })),
   })),
-  outlineLink: PropTypes.string,
 };
 
 MobileHeader.defaultProps = {
-  logo: null,
-  logoAltText: null,
-  number: null,
-  org: null,
-  title: null,
-  authenticatedUserAvatar: null,
-  username: null,
-  isAdmin: false,
   mainMenuDropdowns: [],
-  outlineLink: null,
 };
 
 export default MobileHeader;
